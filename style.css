@@ -1,0 +1,332 @@
+/* Loader Styles */
+#loader {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0B1629;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 6px solid #333;
+    border-top: 6px solid #0B1629;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0B1629;
+    color: #0B1629;
+    line-height: 1.6;
+}
+
+/* Header and Navigation */
+header {
+    position: sticky;
+    top: 0;
+    background-color: #0B1629;
+    padding: 1rem 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.05);
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+    padding-right: 2rem;
+}
+
+nav a {
+    color: #e0e0e0;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: #e0e0e0;
+    color: #0a0a0a;
+}
+
+/* Sections */
+section {
+    height: 100vh;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    /* Removed border-bottom */
+}
+
+h1,
+h2 {
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #cccccc;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+    color: #aaa;
+    /* Removed border-top */
+}
+
+/* Social Sidebar */
+.social-sidebar {
+    position: fixed;
+    bottom: 0;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1000;
+}
+
+.social-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-sidebar li {
+    margin: 10px 0;
+}
+
+.social-sidebar a {
+    color: #b0b0b0;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.social-sidebar a:hover {
+    color: #ffffff;
+}
+
+.social-sidebar .line {
+    width: 1px;
+    height: 80px;
+    background-color: #b0b0b0;
+    margin-top: 10px;
+}
+
+/* About Section Styles */
+#about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #0B1629;
+    color: #e0e0e0;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-text {
+    flex: 1;
+    max-width: 50%;
+    padding-right: 20px;
+}
+
+.about-text h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.about-text h3 {
+    font-size: 2rem;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+}
+
+.about-text h4 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #64ffda;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.services {
+    margin-top: 20px;
+}
+
+.services h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.services ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+.services ul li {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.about-image {
+    flex: 1;
+    max-width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Section Title */
+.section-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.section-number {
+    color: #64ffda;
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.section-heading {
+    color: #ccd6f6;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Left-Aligned About Us Title */
+.section-title-left {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+}
+
+.section-title-left .section-number {
+    color: #64ffda;
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.section-title-left .section-heading {
+    color: #ccd6f6;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* About Container Layout */
+.about-container {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Triangle Bullet List with Columns */
+.tech-list {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    list-style: none; /* ✅ This removes the default bullet */
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+.tech-list li {
+    list-style-type: none; /* ✅ Fallback */
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 15px;
+    color: #a8b2d1;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.95rem;
+}
+
+.tech-list li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: #64ffda;
+    font-size: 1rem;
+    line-height: 1;
+}
