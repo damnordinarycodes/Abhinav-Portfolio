@@ -1,4 +1,4 @@
-/* INITIAL LOADER  */
+/* Loader Styles */
 #loader {
     position: fixed;
     width: 100vw;
@@ -10,56 +10,57 @@
     z-index: 9999;
 }
 
-/* HEADER LOGO CONTAINER*/
+/* Container */
 .hex-logo {
-  position: absolute;
-  top: 1rem;
-  left: 2rem;
-  width: 60px;
-  height: 60px;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    position: absolute;
+    top: 1rem;
+    left: 2rem;
+    width: 60px;
+    height: 60px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/*HEADER ROTATION HEXAGON */
+/* Rotating Hexagon */
 .hexagon-spinner {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  fill: none;
-  stroke: #64ffda;
-  stroke-width: 4;
-  animation: spin 4s linear infinite;
-  transform-origin: center;
-  transition: filter 0.3s ease;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #64ffda;
+    stroke-width: 4;
+    animation: spin 4s linear infinite;
+    transform-origin: center;
+    transition: filter 0.3s ease;
 }
 
 /* Glowing Effect on Hover */
 .hex-logo:hover .hexagon-spinner {
-  filter: drop-shadow(0 0 6px #64ffda);
+    filter: drop-shadow(0 0 6px #64ffda);
 }
 
 /* Center Letter */
 .hex-letter {
-  position: absolute;
-  font-size: 1.5rem;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  color: #64ffda;
-  z-index: 2;
-  pointer-events: none;
+    position: absolute;
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #64ffda;
+    z-index: 2;
+    pointer-events: none;
 }
 
 /* Rotation */
 @keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 
@@ -96,24 +97,30 @@ body {
 html {
     scroll-behavior: smooth;
 }
+
 .about-button {
     display: inline-block;
     padding: 0.6rem 1.4rem;
-    border: 2px solid #64ffda;         /* Sky blue border */
-    color: #64ffda;                    /* Sky blue text */
+    border: 2px solid #64ffda;
+    /* Sky blue border */
+    color: #64ffda;
+    /* Sky blue text */
     background-color: transparent;
     text-decoration: none;
     font-weight: 600;
     font-size: 1rem;
     cursor: pointer;
-    border-radius: 4px;                /* Slightly rounded rectangle */
+    border-radius: 4px;
+    /* Slightly rounded rectangle */
     transition: all 0.3s ease;
     margin-top: 1rem;
 }
 
 .about-button:hover {
-    background-color: #00bfff;         /* Sky blue fill on hover */
-    color: #ffffff;                    /* White text on hover */
+    background-color: #00bfff;
+    /* Sky blue fill on hover */
+    color: #ffffff;
+    /* White text on hover */
 }
 
 .pdf-button {
@@ -134,14 +141,18 @@ html {
 
 /* Home Section */
 #home {
-    height: 100vh; /* Full-screen height for the landing section */
+    height: 100vh;
+    /* Full-screen height for the landing section */
     padding: 3rem 2rem;
     max-width: 700px;
-    margin: 0 auto; /* ✅ This centers it horizontally */
+    margin: 0 auto;
+    /* ✅ This centers it horizontally */
     display: flex;
     flex-direction: column;
-    justify-content: center; /* ✅ Vertically center it */
-    align-items: flex-start; /* Left align text */
+    justify-content: center;
+    /* ✅ Vertically center it */
+    align-items: flex-start;
+    /* Left align text */
 }
 
 
@@ -151,13 +162,15 @@ html {
     font-weight: 800;
     color: #ffffff;
     line-height: 1.1;
-    margin-bottom: 0.2rem; /* smaller margin */
+    margin-bottom: 0.2rem;
+    /* smaller margin */
 }
 
 #home h4 {
     font-size: 1.2rem;
     color: #a8b2d1;
-    margin-bottom: 0.8rem; /* reduced space */
+    margin-bottom: 0.8rem;
+    /* reduced space */
 }
 
 #home p {
@@ -171,7 +184,15 @@ html {
     margin-top: 0.5rem;
 }
 
-
+p a {
+    color: #64ffda;
+    /* Replace with your preferred color */
+    text-decoration: none;
+    /* Optional: remove underline */
+    font-weight: 500;
+    /* Optional: make it a bit bold */
+    transition: color 0.3s ease;
+}
 
 /* Header and Navigation */
 header {
@@ -181,7 +202,8 @@ header {
     position: sticky;
     top: 0;
     transition: top 0.3s ease;
-    box-shadow: none; /* 🔥 Remove the line */
+    box-shadow: none;
+    /* 🔥 Remove the line */
 }
 
 
@@ -189,11 +211,13 @@ nav {
     display: flex;
     justify-content: flex-end;
     gap: 2rem;
-    padding: 20px 2rem 0; /* ⬇ Added 10px space from top */
+    padding: 20px 2rem 0;
+    /* ⬇ Added 10px space from top */
 }
 
 nav a {
-    font-family: 'Fira Code', monospace; /* ⌨️ Typewriter-style font */
+    font-family: 'Fira Code', monospace;
+    /* ⌨️ Typewriter-style font */
     color: #e0e0e0;
     text-decoration: none;
     padding: 0.5rem 1rem;
@@ -210,18 +234,19 @@ nav a:hover {
 }
 
 @keyframes neonPulse {
-  0% {
-    text-shadow: 0 0 4px #64ffda, 0 0 8px #64ffda;
-  }
-  100% {
-    text-shadow: 0 0 10px #64ffda, 0 0 20px #64ffda;
-  }
+    0% {
+        text-shadow: 0 0 4px #64ffda, 0 0 8px #64ffda;
+    }
+
+    100% {
+        text-shadow: 0 0 10px #64ffda, 0 0 20px #64ffda;
+    }
 }
 
 /* Sections */
 section {
-     padding: 60px 20px;
-  width: 100%;
+    padding: 60px 20px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -243,7 +268,8 @@ p {
 }
 
 footer {
-    background-color: #0B1629; /* Same as contact section */
+    background-color: #0B1629;
+    /* Same as contact section */
     text-align: center;
     padding: 2rem;
     font-size: 0.9rem;
@@ -334,7 +360,8 @@ footer {
 }
 
 .about-text p {
-    font-size: 1rem; /* smaller font */
+    font-size: 1rem;
+    /* smaller font */
     line-height: 1.5;
     margin-bottom: 20px;
 }
@@ -376,27 +403,28 @@ footer {
 
 /* Section Title */
 .projects-title-wrapper {
-  text-align: center;
-  margin-bottom: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
 .projects-title {
-  font-size: 2rem; /* Match 'About Me' style */
-  font-weight: 600;
-  color: #ccd6f6;
-  position: relative;
-  display: inline-block;
-  padding-bottom: 10px;
+    font-size: 2rem;
+    /* Match 'About Me' style */
+    font-weight: 600;
+    color: #ccd6f6;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
 }
 
 .projects-title::after {
-  content: '';
-  display: block;
-  width: 60%;
-  height: 1px;
-  background-color: #233554;
-  margin: 0 auto;
-  margin-top: 8px;
+    content: '';
+    display: block;
+    width: 60%;
+    height: 1px;
+    background-color: #233554;
+    margin: 0 auto;
+    margin-top: 8px;
 }
 
 
@@ -430,12 +458,14 @@ footer {
     color: #64ffda;
     font-weight: bold;
     margin-right: 10px;
-    font-size: 1.1rem; /* slightly smaller */
+    font-size: 1.1rem;
+    /* slightly smaller */
 }
 
 .section-title-left .section-heading {
     color: #ccd6f6;
-    font-size: 1.3rem; /* smaller font */
+    font-size: 1.3rem;
+    /* smaller font */
     font-weight: 600;
     margin: 0;
     white-space: nowrap;
@@ -646,13 +676,15 @@ body {
     transition: transform 0.3s ease;
     text-align: left;
     position: relative;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* ✅ Subtle shadow below each card */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    /* ✅ Subtle shadow below each card */
 }
 
 
 .project-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 0 15px #7ab5bd, 0 0 30px rgba(100, 255, 218, 0.5); /* ✅ Glowing shadow */
+    box-shadow: 0 0 15px #7ab5bd, 0 0 30px rgba(100, 255, 218, 0.5);
+    /* ✅ Glowing shadow */
 }
 
 .card-header {
@@ -706,4 +738,108 @@ body {
 .show-more-button:hover {
     background-color: #64ffda;
     color: #0a192f;
+}
+
+
+/* Responsive Styles */
+
+@media (max-width: 1024px) {
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-text,
+    .about-image {
+        max-width: 100%;
+        padding-right: 0;
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    #home h1 {
+        font-size: 2.5rem;
+    }
+
+    #home h4 {
+        font-size: 1rem;
+    }
+
+    #home p {
+        font-size: 0.9rem;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .social-sidebar {
+        display: none;
+    }
+
+    .email-container {
+        display: none;
+    }
+
+    .about-text h1,
+    .about-text h3,
+    .about-text h4 {
+        text-align: center;
+    }
+
+    .section-title-left {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-title-left .section-heading::after {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    nav a {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem;
+    }
+
+    .about-button,
+    .pdf-button,
+    .contact-button {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .projects-title {
+        font-size: 1.5rem;
+    }
+
+    .contact-title {
+        font-size: 2rem;
+    }
+
+    .contact-description {
+        font-size: 1rem;
+    }
+
+    .tech-list {
+        columns: 1;
+    }
+
+    .hex-logo {
+        top: 0.5rem;
+        left: 1rem;
+        width: 50px;
+        height: 50px;
+    }
 }
