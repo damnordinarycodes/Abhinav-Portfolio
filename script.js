@@ -23,7 +23,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Social sidebar hover JS (optional — CSS handles it well too)
+// Social sidebar hover JS
 const socialLinks = document.querySelectorAll('.social-sidebar a');
 
 socialLinks.forEach(link => {
@@ -34,4 +34,22 @@ socialLinks.forEach(link => {
     link.addEventListener('mouseleave', () => {
         link.style.color = '#b0b0b0';
     });
+});
+
+// Header hide/show on scroll
+let lastScrollY = window.scrollY;
+const header = document.getElementById("main-header");
+
+window.addEventListener("scroll", () => {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > lastScrollY) {
+        // Scrolling down
+        header.style.top = "-100px";
+    } else {
+        // Scrolling up
+        header.style.top = "0";
+    }
+
+    lastScrollY = currentScrollY;
 });
